@@ -517,7 +517,6 @@ body {
   border-radius: 1.5px;
   display: inline-block;
 }
-/* 追従するトップへ戻るボタン */
 .js-scroll-top {
   display: none;
   position: fixed;
