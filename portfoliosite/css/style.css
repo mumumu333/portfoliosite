@@ -1,0 +1,398 @@
+/* reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+::before , ::after {
+  box-sizing: inherit;
+}
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  vertical-align: middle;
+  text-align: inherit;
+  font: inherit;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* 全てに適用するCSS */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-size: 10px;
+  background-color: #f7f7f7;
+  color: #686664;
+  font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
+}
+header {
+  width: 100%;
+  margin-bottom: 60px;
+}
+.menu {
+  display: none;
+}
+#content {
+  width: 100%;
+}
+#content img {
+  width: 100%;
+}
+#inner {
+  max-width: 740px;
+  width: 90%;
+  margin: auto;
+}
+.pc-menu {
+  display: none;
+}
+footer {
+  text-align: center;
+  margin-bottom: 10px;
+}
+footer p {
+  font-size: 0.5rem;
+  color: #303335;
+}
+.bg {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background-image: linear-gradient(45deg, #8baaaa 0%, #ae8b9c 100%);
+}
+.mv-title {
+  width: 90%;
+  font-family: Futura, 'Century Gothic';
+  text-align: center;
+  color: #FFF;
+  font-size: 3rem;
+  top: 50%;
+  line-height: 1.2;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  position: absolute;
+}
+.js-animation {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(40px);
+  transition: all 1s;
+}
+.js-animation.is-show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
+}
+.description {
+  text-align: left;
+  line-height: 1.8;
+  width: 57%;
+  margin-top: 2rem;
+}
+.name {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+h1 {
+  font-size: 1.6rem;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 60px;
+}
+.skill {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#content p {
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+.skill li {
+  font-weight: normal;
+  font-size: 1rem;
+  width: 45%;
+  list-style: none;
+  margin-bottom: 30px;
+  display: flex;
+  flex: 1 0 auto;
+  margin-right: 2.3rem;
+}
+.pc_br {
+  display: inline;
+}
+.list-title {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+#sec1 .image {
+  width: 35%;
+  border-radius: 50%;
+}
+#sec1 .image img {
+  border-radius: 50%;
+}
+.section {
+  margin-bottom: 100px;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+#sec3 h2 {
+  width: 100%;
+  font-size: 1rem;
+  margin: 10px auto;
+  font-weight: bold;
+}
+.works {
+  width: 100%;
+  margin-bottom: 5px;
+  display: grid;
+  list-style: none;
+  grid-gap: 5px;
+  grid-template-columns: repeat(2,1fr);
+}
+.works li {
+  padding-top: 100%;
+  position: relative;
+}
+.works li p {
+  position: absolute;
+  font-size: 0.8rem!important;
+  font-weight: 900!important;
+  color: #fff;
+  right: 5px;
+  bottom: 5px;
+}
+.mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;  /* 絶対位置指定 */
+  top: 0;
+  left: 0;
+  opacity: 0;  /* マスクを表示しない */
+  background-color: rgba(0, 0, 0, 0.623);  /* マスクは半透明 */
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.works li:hover .mask {
+  opacity: 1;  /* マスクを表示する */
+}
+.works img {
+  position: absolute;
+  top: 0;            
+  width: 100%;
+  height: 100%;        
+  object-fit: cover;  
+  object-position: top;
+}
+.txt-hide {
+  display: none;
+}
+button.more {
+  width: 30%;
+  font-size: 0.8rem;
+  margin: 20px auto 0;
+  font-weight: bold;
+  display: block;
+  background-color: #696969;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  outline: 0;
+  transition: .1s;
+  cursor: pointer;
+}
+button.more:hover {
+  background-color: #424242;
+}
+button.more::after {
+  content: "MORE";
+  transition: .1s;
+  -erbkit-transition: .1s;
+}
+button.more.on-click::after {
+  content: "CLOSE";
+}
+/***追従するトップへ戻るボタン***/
+#page-top {
+  position: fixed;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  bottom: 20px;
+  color: #a9a8a8;
+  border: solid 2px;
+  border-radius: 50%;
+  text-decoration: none;
+}
+#arrow {
+  margin: 14px auto;
+  width: 10px;
+  height: 10px;
+  border-top: 3px solid #a9a8a8;
+  border-right: 3px solid #a9a8a8;
+  transform: rotate(-45deg);
+  border-radius: 1.5px;
+}
+.menu-list a {
+  text-decoration:none;
+  color:#FFF;
+  font-weight:bold;  
+}
+/* ウィンドウ幅が960px以上の場合CSS */
+@media screen and (min-width:960px ) {
+.pc-menu {
+  font-family: Futura, 'Century Gothic';
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  width: 30%;
+  margin-left: auto;
+  padding-top: 10px;
+  padding-right: 20px;
+  color: #FFF;
+}
+#sec4 .works {
+  grid-template-columns: repeat(2,1fr);
+}
+}
+/* ウィンドウ幅が959px以下のCSS */
+@media screen and (max-width:959px) {
+header {
+  margin-bottom: 40px;
+}
+h1 {
+  margin-bottom: 40px;
+}
+.section {
+  margin-bottom: 80px;
+}
+.pc_br {
+  display: none;
+}
+.btn {
+  /* ボタンの配置位置  */
+  position: fixed;
+  right: 16px;
+  /* ボタンの大きさ  */
+  height: 40px;
+  /* 最前面に */
+  z-index: 10;
+}
+/***** 真ん中のバーガー線 *****/
+.btn-line {
+  display: block;
+  position: relative;  /* バーガー線の位置基準として設定 */
+  width: 20px;  /* 線の長さと高さ */
+  height: 2px;
+  background-color: #d6d5d5;  /* バーガー線の色 */
+  transition: .2s;
+}
+/****** 上下のバーガー線 *****/
+.btn-line::before,
+.btn-line::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #d6d5d5;
+  transition: .5s;
+}
+.btn-line::before {
+  /* 上の線の位置 */
+  transform: translateY(-7px);
+}
+.btn-line::after {
+  /* 下の線の位置 */
+  transform: translateY(7px);
+}
+/***** メニューオープン時 *****/
+.btn-line.open {
+  background-color: transparent;    /* 真ん中の線を透明に */
+}
+.btn-line.open::before ,
+.btn-line.open::after {
+  content: "";
+  background-color: #d6d5d5;  /* 上下の線の色を変える */
+  transition: .2s;
+}
+.btn-line.open::before {
+  transform: rotate(45deg);  /* 上の線を傾ける */
+}
+.btn-line.open::after {
+  transform: rotate(-45deg);  /* 下の線を傾ける */
+}
+.flex {
+  display: block;
+}
+.skill {
+  display: block;
+}
+.skill li {
+  width: 100%;
+}
+#sec1 .image {
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.description {
+  margin-top: 3rem;
+  width: 100%;
+}
+.menu {
+  /* メニューを縦に */
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  /* メニューの位置マイナス指定で画面外に */
+  right: -70%;
+  width: 70%;
+  height: 100vh;
+  background-color: #4d4d4ced;
+  color:#efefef;
+  transition: .3s;
+  z-index: 2;
+}
+.menu-list {
+  /* メニューテキスト位置をリスト内中心に */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.menu-list:hover {
+  background-color: rgba(255, 255, 255, .5);
+  color: #333;
+  cursor: pointer;
+  transition: .3s;
+}
+/***** メニューオープン時位置0にして画面内に *****/
+.menu.open {
+  position: fixed;
+  right: 0;
+  height: 65%;
+  width: 100%;
+  top: 0;
+  right: 0;
+}
+.bg {
+  height: 250px;
+}
+}
