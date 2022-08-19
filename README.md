@@ -1,5 +1,3 @@
-# portfolio
-制作物をアップしています
 # website
  
 * portfoliosite
