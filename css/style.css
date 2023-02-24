@@ -29,11 +29,12 @@ body {
   font-size: 10px;
   background-color: #f7f7f7;
   color: #686664;
-  font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 header {
   width: 100%;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
+  font-family: 'Josefin Sans', sans-serif;
 }
 .menu {
   display: none;
@@ -59,6 +60,7 @@ footer {
 footer p {
   font-size: 0.5rem;
   color: #303335;
+  font-family: 'Josefin Sans', sans-serif;
 }
 .bg {
   position: relative;
@@ -68,7 +70,6 @@ footer p {
 }
 .mv-title {
   width: 90%;
-  font-family: Futura, 'Century Gothic';
   text-align: center;
   color: #FFF;
   font-size: 3rem;
@@ -104,6 +105,7 @@ footer p {
   margin-bottom: 0.5rem;
 }
 h1 {
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 1.6rem;
   text-align: center;
   font-weight: bold;
@@ -126,8 +128,6 @@ h1 {
   list-style: none;
   margin-bottom: 30px;
   display: flex;
-  flex: 1 0 auto;
-  margin-right: 2.3rem;
 }
 .pc_br {
   display: inline;
@@ -180,16 +180,16 @@ h1 {
 .mask {
   width: 100%;
   height: 100%;
-  position: absolute;  /* 絶対位置指定 */
+  position: absolute;
   top: 0;
   left: 0;
-  opacity: 0;  /* マスクを表示しない */
-  background-color: rgba(0, 0, 0, 0.623);  /* マスクは半透明 */
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.623);
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 .works li:hover .mask {
-  opacity: 1;  /* マスクを表示する */
+  opacity: 1;
 }
 .works img {
   position: absolute;
@@ -203,6 +203,7 @@ h1 {
   display: none;
 }
 button.more {
+  font-family: 'Josefin Sans', sans-serif;
   width: 30%;
   font-size: 0.8rem;
   margin: 20px auto 0;
@@ -275,8 +276,8 @@ button.more.on-click::after {
 /* ウィンドウ幅が959px以下のCSS */
 @media screen and (max-width:959px) {
 header {
-  margin-bottom: 40px;
-}
+  margin-bottom: 60px;
+}  
 h1 {
   margin-bottom: 40px;
 }
@@ -352,7 +353,7 @@ h1 {
   margin: 0 auto;
 }
 .description {
-  margin-top: 3rem;
+  margin-top: 4rem;
   width: 100%;
 }
 .menu {
@@ -364,7 +365,7 @@ h1 {
   right: -70%;
   width: 70%;
   height: 100vh;
-  background-color: #4d4d4ced;
+  background-color: rgba(75, 74, 74, 0.9);
   color:#efefef;
   transition: .3s;
   z-index: 2;
@@ -375,7 +376,7 @@ h1 {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100%;
+  height: 50%;
 }
 .menu-list:hover {
   background-color: rgba(255, 255, 255, .5);
@@ -387,8 +388,8 @@ h1 {
 .menu.open {
   position: fixed;
   right: 0;
-  height: 65%;
-  width: 100%;
+  height: 100%;
+  width: 40%;
   top: 0;
   right: 0;
 }
